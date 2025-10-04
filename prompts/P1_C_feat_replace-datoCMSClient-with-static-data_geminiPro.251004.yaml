@@ -1,0 +1,17 @@
+role: senior-frontend-developer
+task: Replace dato queries with static data
+context: 
+  - background: 
+    - The queries folder has queries to dato.
+  - requirement: 
+    - I don't want to use dato. replace all that with some static value.
+    - Example - if ProfileBanner is return. Create an object of type ProfileBanner. fill in some static data and return it.
+output: 
+  - all query return values are replaced.
+agency: # Not Tested Yet
+  - agent - Complete the task yourself. Take decisions along the way.
+self-verification: 
+  - compile  
+before-starting:
+  - "Ask me any questions that you feel could help you craft a better response."
+  - "Summarize this prompt & action you will take. WAIT FOR ME to ask you to continue"

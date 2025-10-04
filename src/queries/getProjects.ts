@@ -1,6 +1,5 @@
 // queries/getProjects.ts
-import datoCMSClient from './datoCMSClient';
-import { Project } from '../types';
+import { Project } from "../types";
 
 const GET_PROJECTS = `
   query {
@@ -16,6 +15,24 @@ const GET_PROJECTS = `
 `;
 
 export async function getProjects(): Promise<Project[]> {
-  const data = await datoCMSClient.request<{ allProjects: Project[] }>(GET_PROJECTS);
-  return data.allProjects;
+  // static data for now
+  return [
+    {
+      title: "Portfolio Website",
+      description:
+        "A personal portfolio website to showcase my projects and skills.",
+      techUsed: "React, TypeScript, CSS",
+      image: {
+        url: "https://example.com/portfolio.png",
+      },
+    },
+    {
+      title: "E-commerce Platform",
+      description: "An online platform for buying and selling products.",
+      techUsed: "Node.js, Express, MongoDB",
+      image: {
+        url: "https://example.com/ecommerce.png",
+      },
+    },
+  ];
 }
